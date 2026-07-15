@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<img src="./images/logo-dark.svg" alt="Digital Bank's logo">
-		<nav>
+		<nav class="desktop-nav">
 			<ul>
 				<li><a href="#" aria-label="Home" name="Home">Home</a></li>
 				<li><a href="#" aria-label="About" name="About">About</a></li>
@@ -20,6 +20,19 @@
 				<li><a href="#" aria-label="Careers" name="Careers">Careers</a></li>
 			</ul>
 		</nav>
+    <nav class="mobile-nav" id="mobile-nav">
+      <img id="open-menu" src="./images/icon-hamburger.svg" alt="Open Menu" aria-label="Mobile Menu">
+      <div class="mobile-menu" id="mobile-menu" aria-label="Mobile Menu Choices">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <img id="close-menu" src="./images/icon-close.svg" alt="Close Menu" aria-label="Close Menu">
+      </div>
+    </nav>
 		<button class="invite-btn">Request Invite</button>
 	</header>
 	<main>
@@ -76,7 +89,7 @@
           </div>
           <div class="card-body">
             <p class="author">By Claire Robinson</p>
-            <h4>Receive money in any currency with no fees</h4>
+            <a href="#" name="Link to Article" aria-label="Link to Article"><h4>Receive money in any currency with no fees</h4></a>
             <p>The world is getting smaller and we’re becoming more mobile. So why should you be 
   forced to only receive money in a single …</p>
           </div>
@@ -87,7 +100,7 @@
           </div>
           <div class="card-body">
             <p class="author">By Wilson Hutton</p>
-            <h4>Treat yourself without worrying about money</h4>
+            <a href="#" name="Link to Article" aria-label="Link to Article"><h4>Treat yourself without worrying about money</h4></a>
             <p>Our simple budgeting feature allows you to separate out your spending and set 
   realistic limits each month. That means you …</p>
           </div>
@@ -98,7 +111,7 @@
           </div>
           <div class="card-body">
             <p class="author">By Wilson Hutton</p>
-            <h4>Receive money in any currency with no fees</h4>
+            <a href="#" name="Link to Article" aria-label="Link to Article"><h4>Receive money in any currency with no fees</h4></a>
             <p>Take your Digitalbank card wherever you go
   We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
   while you’re abroad. We’ll even …</p>
@@ -110,7 +123,7 @@
           </div>
           <div class="card-body">
             <p class="author">By Claire Robinson</p>
-            <h4>Our invite-only Beta accounts are now live!</h4>
+            <a href="#" name="Link to Article" aria-label="Link to Article"><h4>Our invite-only Beta accounts are now live!</h4></a>
             <p>After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
   It’s easy to request an invite through the site ...</p>
           </div>
