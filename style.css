@@ -111,6 +111,7 @@ main {
 }
 
 .cta-section {
+    padding-bottom: 6rem;
     background-color: var(--gray-50);
     overflow-x: hidden;
 }
@@ -128,7 +129,6 @@ main {
     place-self: center start;
     gap: 1rem;
     margin-left: 8rem;
-    padding-bottom: 5rem;
 }
 
 h1 {
@@ -209,6 +209,8 @@ section:not(section.cta-section) {
 .articles {
     background-color: var(--gray-50);
     padding-block: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     transform: translateY(-9.5rem);
 }
 
@@ -574,17 +576,6 @@ p.copyright {
     }
 }
 
-@media screen and (width <= 815px) {
-    .articles {
-        display: flex;
-        justify-content: center;
-    }
-
-    .card-container {
-        justify-content: center;
-    }
-}
-
 @media screen and (width <= 765px) {
     nav a {
         display: none;
@@ -593,7 +584,7 @@ p.copyright {
 
 @media screen and (width <= 630px) {
     .articles {
-        padding: .5rem;
+        padding-inline: .5rem;
     }
     .card {
         width: 100%;
