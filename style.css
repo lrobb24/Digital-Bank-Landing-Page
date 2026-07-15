@@ -115,10 +115,6 @@ main {
     overflow-x: hidden;
 }
 
-.cta-section:not(section.cta-section) {
-    margin-inline: 8rem;
-}
-
 .group-cta-img {
     display: grid;
     align-items: center;
@@ -132,6 +128,7 @@ main {
     place-self: center start;
     gap: 1rem;
     margin-left: 8rem;
+    padding-bottom: 5rem;
 }
 
 h1 {
@@ -387,12 +384,6 @@ p.copyright {
     }
 }
 
-@media screen and (width <= 1263px) {
-    .card-container {
-        /* justify-content: center; */
-    }
-}
-
 @media screen and (width <= 1260px) {
     .group-cta-img img {
         padding-block: 2rem;
@@ -476,6 +467,14 @@ p.copyright {
     }
 }
 
+@media screen and (width <=1024px) {
+    .group-cta-img img {
+        background-image: url('./images/bg-intro-mobile.svg');
+        background-size: cover;
+        min-width: 60%;
+    }
+}
+
 @media screen and (width <= 1008px) {
     header {
         padding-inline: 5rem;
@@ -504,6 +503,12 @@ p.copyright {
 
     footer {
         padding-inline: 5rem;
+    }
+}
+
+@media screen and (width <= 1000px) {
+    .group-cta-img img {
+        padding: 3rem;
     }
 }
 
@@ -596,6 +601,10 @@ p.copyright {
 }
 
 @media screen and (width <= 550px) {
+    .group-cta-img img {
+        min-width: 95%;
+    }
+
     .examples > div {
         min-width: 100%;
     }
@@ -612,5 +621,21 @@ p.copyright {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+}
+
+@media screen and (width <= 475px) {
+    .group-cta-img img {
+        min-width: 100%;
+    }
+}
+
+@media screen and (width <= 400px) {
+    p.copyright {
+        font-size: calc(var(--fs-body) * .5);
+    }
+
+    footer {
+        padding-inline: .5rem;
     }
 }
