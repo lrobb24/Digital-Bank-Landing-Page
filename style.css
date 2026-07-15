@@ -86,8 +86,16 @@ nav a::before {
     transition: all 300ms ease-in-out;
 }
 
+nav a:hover,
+nav a:focus-visible,
+nav a:focus-within,
+nav a:focus {
+    outline: none;
+}
+
 nav a:hover::before,
 nav a:focus-visible::before,
+nav a:focus-within::before,
 nav a:focus::before {
     position: absolute;
     width: 100%;
@@ -308,7 +316,10 @@ p.author {
     transition: color 250ms ease-in-out;
 }
 
-.card a:hover {
+.card a:hover,
+.card a:focus,
+.card a:focus-visible,
+.card a:focus-within {
     color: var(--cyan-400);
     transition: color 250ms ease-in-out;
 }
