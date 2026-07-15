@@ -111,7 +111,7 @@ main {
 }
 
 .cta-section {
-    padding-bottom: 6rem;
+    /* padding-bottom: 6rem; */
     background-color: var(--gray-50);
     overflow-x: hidden;
 }
@@ -129,6 +129,7 @@ main {
     place-self: center start;
     gap: 1rem;
     margin-left: 8rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
@@ -178,6 +179,13 @@ section:not(section.cta-section) {
     margin-bottom: 1rem;
 }
 
+span {
+    background: linear-gradient(to bottom right, var(--green-500), var(--cyan-400));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .why {
     max-width: 60ch;
     margin-bottom: 3rem;
@@ -198,6 +206,13 @@ section:not(section.cta-section) {
     align-self: flex-start;
 }
 
+.examples > div h3 {
+    background: linear-gradient(to bottom right, var(--green-500), var(--cyan-400));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .examples > * {
     width: 25%;
 }
@@ -215,6 +230,10 @@ section:not(section.cta-section) {
 }
 
 .articles h2 {
+    background: linear-gradient(to bottom right, var(--cyan-400), var(--green-500));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     font-size: calc(var(--fs-body) * 2);
     font-weight: var(--fw-300);
     margin-bottom: 4rem;
@@ -628,5 +647,11 @@ p.copyright {
 
     footer {
         padding-inline: .5rem;
+    }
+}
+
+@media screen and (width <= 340px) {
+    .cta h1 {
+        font-size: calc(var(--fs-body) * 2);
     }
 }
