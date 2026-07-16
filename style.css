@@ -45,6 +45,10 @@ header {
     padding-inline: 8rem;
 }
 
+img.open-menu {
+    display: none;
+}
+
 nav.mobile-nav {
     display: none;
 }
@@ -415,6 +419,50 @@ footer span {
     font-size: inherit;
 }
 
+header {
+    position: relative;
+}
+
+.active {
+    position: absolute;
+    content: '';
+    bottom: -23rem;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .05), rgba(0, 0, 0, .15));
+    mix-blend-mode: darken;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 3px 2px 0 0 rgba(255,255,255,.5),
+                          inset -1px -2px 0 0 rgba(255,255,255,.5);
+    z-index: 10;
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-block: 1.5rem;
+        padding-inline: 1rem;
+    }
+
+    .mobile-menu img {
+        align-self: flex-end;
+    }
+
+    .mobile-menu ul {
+        flex-direction: column;
+    }
+
+    .mobile-menu a {
+        color: black;
+        font-weight: var(--fw-300);
+        font-size: calc(var(--fs-body) * 2);
+    }
+}
+
 /*       Responsive Media Queries    */
 @media screen and (width <= 1300px) {
      .group-cta-img img {
@@ -557,16 +605,34 @@ footer span {
         padding-inline: 1.5rem;
     }
 
+    img.open-menu {
+    display: block;
+    margin-left: auto;
+}
+
     nav.mobile-nav {
-        display: flex;
+        display: block;
     }
 
     .mobile-menu {
         display: none;
     }
 
-    nav.desktop-nav a,
-    header button {
+    nav.mobile-nav a {
+        background: linear-gradient(to right, var(--green-500), var(--cyan-400));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    /* header {
+        max-width: 100%;
+    } */
+
+    header .invite-btn {
         display: none;
     }
 
@@ -614,12 +680,6 @@ footer span {
     }
 }
 
-@media screen and (width <= 765px) {
-    nav a {
-        display: none;
-    }
-}
-
 @media screen and (width <= 630px) {
     .articles {
         padding-inline: .5rem;
@@ -631,6 +691,10 @@ footer span {
 }
 
 @media screen and (width <= 550px) {
+    .active .mobile-menu a {
+        color: ;
+    }
+    
     .group-cta-img img {
         min-width: 95%;
     }
@@ -657,7 +721,7 @@ footer span {
         min-width: 75%;
     }
 
-    button {
+    .btn-copyright button {
         width: 7.5rem;
         height: 1.95rem;
         font-size: calc(var(--fs-body) *.7);
