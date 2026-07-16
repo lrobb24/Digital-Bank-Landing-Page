@@ -426,7 +426,7 @@ header {
 .active {
     position: absolute;
     content: '';
-    bottom: -18.5rem;
+    bottom: -20rem;
     right: 1rem;
     left: 1rem;
     display: flex;
